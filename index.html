@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalkulace spolupráce | Kryštof Regent</title>
+  <meta name="description" content="Kalkulace spolupráce v brandingu a Figma systémech.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .gdpr-notice {
+      font-size: 11px;
+      color: #8e8e93;
+      line-height: 1.4;
+      margin-top: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Subtilní 3D vodoznak na pozadí -->
+  <div class="bg-3d-scene" id="scene-3d">
+    <div class="cube-3d-wrap">
+      <div class="regent-3d-text" id="regent-3d">REGENT</div>
+    </div>
+  </div>
+
+  <header class="app-header">
+    <div class="header-container">
+      <div class="header-logo-row">
+        <img src="REGENT.svg" alt="REGENT Logo" class="brand-logo">
+        <span class="badge-pill">CORE FRAMEWORK</span>
+      </div>
+      <h1 class="main-title">KALKULACE <span class="highlight">SPOLUPRÁCE</span></h1>
+      <p class="subtitle">Navolte si rozsah brandingu a funkčního systému přesně pro potřeby vaší firmy.</p>
+    </div>
+  </header>
+
+  <main class="main-layout">
+    <section class="configurator-section">
+      
+      <!-- Pevný základ -->
+      <div class="module-group">
+        <div class="group-header">
+          <span class="step-num">01</span>
+          <div>
+            <h2>PEVNÝ ZÁKLADNÍ KÁMEN</h2>
+            <p>Tato část je povinná pro každou spolupráci. Bez pevné strategie a vizuálního řádu nelze stavět další marketing.</p>
+          </div>
+        </div>
+
+        <div class="card card-base active-locked" id="card-base">
+          <div class="card-top-bar">
+            <span class="card-status-badge">VŽDY ZAHRNUTO</span>
+          </div>
+          <div class="card-header-row">
+            <div>
+              <h3 class="card-title">CORE IDENTITY</h3>
+              <p class="card-tagline">Kompletní rebranding, DNA firmy a pravidla vizuální identity.</p>
+            </div>
+            <div class="card-price">30 000 Kč</div>
+          </div>
+
+          <div class="card-breakdown">
+            <div class="phase-pill"><strong>C (Clarify):</strong> Hloubkový výzkum, DNA značky a profil jednoho klíčového zákazníka.</div>
+            <div class="phase-pill"><strong>O (Observe):</strong> Analýza trhu, vymezení vůči konkurenci a kalibrace tónu komunikace.</div>
+            <div class="phase-pill"><strong>R (Refine):</strong> 2 kreativní směry na výběr, stavba loga, barevné palety a typografie.</div>
+            <div class="phase-pill"><strong>E (Execute):</strong> Brand manuál v PDF, podklady pro tisk i web a ukázky aplikace značky.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Volitelné moduly -->
+      <div class="module-group">
+        <div class="group-header">
+          <span class="step-num">02</span>
+          <div>
+            <h2>ROZŠIŘUJÍCÍ MODULY NA MÍRU</h2>
+            <p>Naklikejte si přesně ty nástroje, které vám ušetří čas a pomohou okamžitě prodávat.</p>
+          </div>
+        </div>
+
+        <div class="modules-grid">
+          
+          <!-- Modul 1: Figma Engine -->
+          <label class="card card-addon" for="check-figma">
+            <input type="checkbox" id="check-figma" class="module-checkbox" data-price="20000" data-weeks="1" data-name="Figma Production Engine">
+            <div class="custom-checkbox"></div>
+            <div class="card-content">
+              <div class="card-header-row">
+                <h3 class="card-title">FIGMA PRODUCTION ENGINE</h3>
+                <div class="card-price">+20 000 Kč</div>
+              </div>
+              <p class="card-desc">Živá knihovna komponent a šablon ve Figmě. Váš tým tvoří on-brand grafiku za 10 minut bez Canvy.</p>
+              <ul class="feature-list">
+                <li>24 master layoutů pro sítě (kompletní systém kompozic a formátů)</li>
+                <li>Šablony pro výkonnostní reklamní bannery</li>
+                <li>Šablona pro firemní prodejní prezentaci</li>
+                <li>Průvodce inspiračními zdroji a video tutoriál jak systém používat</li>
+              </ul>
+            </div>
+          </label>
+
+          <!-- Modul 2: Video Kampaň a Reels -->
+          <label class="card card-addon" for="check-video">
+            <input type="checkbox" id="check-video" class="module-checkbox" data-price="30000" data-weeks="2" data-name="Video Kampaň a Reels">
+            <div class="custom-checkbox"></div>
+            <div class="card-content">
+              <div class="card-header-row">
+                <h3 class="card-title">VIDEO KAMPAŇ A REELS</h3>
+                <div class="card-price">+30 000 Kč</div>
+              </div>
+              <p class="card-desc">Kompletní produkce a spuštění startovací kampaně. Okamžitá pozornost na sociálních sítích.</p>
+              <ul class="feature-list">
+                <li>1 hlavní brandový video spot v reklamním formátu</li>
+                <li>5 hotových vertikálních Reels videí se střihem a titulky</li>
+                <li>Kampaňová strategie a hlavní reklamní myšlenka (Big Idea)</li>
+                <li>Sada sladěných kampaňových bannerů a příspěvků</li>
+              </ul>
+            </div>
+          </label>
+
+          <!-- Modul 3: Shoptet Redesign a Nasazení -->
+          <label class="card card-addon" for="check-shoptet">
+            <input type="checkbox" id="check-shoptet" class="module-checkbox" data-price="30000" data-weeks="1.5" data-name="Shoptet Redesign a Nasazení">
+            <div class="custom-checkbox"></div>
+            <div class="card-content">
+              <div class="card-header-row">
+                <h3 class="card-title">SHOPTET REDESIGN A NASAZENÍ</h3>
+                <div class="card-price">+30 000 Kč</div>
+              </div>
+              <p class="card-desc">Nasazení nové vizuální identity přímo do vašeho Shoptetu. Nemusíte platit drahé externí programátory.</p>
+              <ul class="feature-list">
+                <li>Kompletní grafické přizpůsobení vybrané Shoptet šablony</li>
+                <li>Design a nasazení Homepage, bannerů a patičky</li>
+                <li>Sladění produktových stránek a kategorií (včetně AI promptů)</li>
+                <li>Předání hotového e-shopu připraveného k okamžitému prodeji</li>
+              </ul>
+            </div>
+          </label>
+
+          <!-- Modul 4: Roční Content Plán -->
+          <label class="card card-addon" for="check-content">
+            <input type="checkbox" id="check-content" class="module-checkbox" data-price="15000" data-weeks="0.5" data-name="Celoroční obsahová strategie">
+            <div class="custom-checkbox"></div>
+            <div class="card-content">
+              <div class="card-header-row">
+                <h3 class="card-title">CELOROČNÍ OBSAHOVÁ STRATEGIE</h3>
+                <div class="card-price">+15 000 Kč</div>
+              </div>
+              <p class="card-desc">Hloubkový algoritmický průzkum feedu a témat na 12 měsíců. Váš marketing ví každý týden co publikovat.</p>
+              <ul class="feature-list">
+                <li>12 hlavních prodejních pilířů podle feedu cílového zákazníka</li>
+                <li>Obsahová matice nákupních úhlů a prodejních háčků</li>
+                <li>Struktura prodejních trychtýřů na sociálních sítích</li>
+                <li>Připravené textové šablony pro rychlou tvorbu postů</li>
+              </ul>
+            </div>
+          </label>
+
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Pravý fixní panel se souhrnem -->
+    <aside class="summary-aside">
+      <div class="summary-card">
+        <h3 class="summary-title">KALKULACE NABÍDKY</h3>
+        <p class="summary-desc">Cena a harmonogram se přepočítávají v reálném čase podle vašeho výběru.</p>
+
+        <div class="price-container">
+          <span class="price-label">Odhadovaná celková investice</span>
+          <div class="price-value-wrap">
+            <span class="price-value" id="total-price">30 000</span>
+            <span class="price-currency">Kč</span>
+          </div>
+          <span class="price-tax-note">Uvedená cena je konečná bez DPH</span>
+        </div>
+
+        <div class="metrics-grid">
+          <div class="metric-box">
+            <span class="metric-label">Doba realizace</span>
+            <span class="metric-value" id="total-time">2 až 3 týdny</span>
+          </div>
+          <div class="metric-box">
+            <span class="metric-label">Vybrané moduly</span>
+            <span class="metric-value" id="modules-count">1 položka</span>
+          </div>
+        </div>
+
+        <div class="summary-items-list" id="items-list">
+          <div class="summary-item">
+            <span class="item-name">CORE Identity (Základ)</span>
+            <span class="item-price">30 000 Kč</span>
+          </div>
+        </div>
+
+        <div class="action-buttons-group">
+          <button class="btn btn-primary" id="btn-copy">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+            Zkopírovat specifikaci nabídky
+          </button>
+          <a href="#inquiry-box" class="btn btn-secondary" id="btn-inquire">
+            Mám zájem o tuto konfiguraci
+          </a>
+        </div>
+
+        <!-- Rychlý formulář pro kontakt s Formspree -->
+        <div class="inquiry-box" id="inquiry-box">
+          <h4>NEZÁVAZNÁ POPTÁVKA</h4>
+          <p>Odešlete vybranou konfiguraci a ozvu se vám do 24 hodin.</p>
+          <form id="order-form">
+            <div class="form-group">
+              <label for="client-name">Vaše jméno a firma</label>
+              <input type="text" id="client-name" name="name" placeholder="Jan Novák | Firma s.r.o." required>
+            </div>
+            <div class="form-group">
+              <label for="client-email">Váš email</label>
+              <input type="email" id="client-email" name="email" placeholder="jan@firma.cz" required>
+            </div>
+            <div class="form-group">
+              <label for="client-note">Poznámka nebo web</label>
+              <input type="text" id="client-note" name="note" placeholder="www.vasespolecnost.cz">
+            </div>
+            <button type="submit" class="btn btn-submit" id="btn-submit">Odeslat nezávaznou poptávku</button>
+            <p class="gdpr-notice">Odesláním formuláře berete na vědomí zpracování osobních údajů pro účely vyřízení poptávky.</p>
+            <div class="form-success-msg" id="success-msg">Děkuji. Poptávka byla úspěšně odeslána. Brzy se vám ozvu.</div>
+            <div class="form-error-msg" id="error-msg">Odeslání se nezdařilo. Zkuste to prosím znovu nebo napište na e-mail.</div>
+          </form>
+        </div>
+
+      </div>
+    </aside>
+  </main>
+
+  <footer class="app-footer">
+    <div class="footer-container">
+      <div class="footer-logo-row" title="Klikněte pro efekt">
+        <img src="REGENT.svg" alt="REGENT" class="footer-logo" id="f-logo">
+      </div>
+
+      <p class="footer-credits">
+        <span class="footer-line">Kryštof Regent &bull; IČO: 29812755 &bull; Sídlo: Holečkova 959/63, Smíchov, 150 00 Praha 5 &bull; Fyzická osoba zapsaná v živnostenském rejstříku</span>
+        <span class="footer-line">Neplátce DPH &bull; Kontakt: <a href="https://www.instagram.com/krystofregent/" target="_blank" rel="noopener noreferrer" class="footer-link">Instagram</a> &bull; <a href="https://www.linkedin.com/in/krystofregent/" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn</a></span>
+      </p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
