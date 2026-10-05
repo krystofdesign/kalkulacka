@@ -5,15 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kalkulace spolupráce | Kryštof Regent</title>
   <meta name="description" content="Kalkulace spolupráce v brandingu a Figma systémech.">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg?v=14">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=14">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png?v=14">
-  <link rel="shortcut icon" href="favicon.ico?v=14">
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=14">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg?v=18">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=18">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png?v=18">
+  <link rel="shortcut icon" href="favicon.ico?v=18">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=18">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=14">
+  <link rel="stylesheet" href="style.css?v=18">
   <style>
     .gdpr-notice {
       font-size: 11px;
@@ -36,7 +36,7 @@
   <header class="app-header">
     <div class="header-container">
       <div class="header-logo-row">
-        <img src="REGENT.svg?v=14" alt="REGENT Logo" class="brand-logo">
+        <img src="REGENT.svg?v=18" alt="REGENT Logo" class="brand-logo">
         <span class="badge-pill">CORE FRAMEWORK</span>
       </div>
       <h1 class="main-title">KALKULACE <span class="highlight">SPOLUPRÁCE</span></h1>
@@ -206,30 +206,43 @@
 
         <!-- Rychlý formulář pro kontakt s Formspree -->
         <div class="inquiry-box" id="inquiry-box">
-          <h4>NEZÁVAZNÁ POPTÁVKA</h4>
-          <p>Odešlete vybranou konfiguraci a ozvu se vám do 24 hodin.</p>
-          <form id="order-form">
-            <div class="form-group">
-              <label for="client-name">Vaše jméno a příjmení</label>
-              <input type="text" id="client-name" name="name" placeholder="Jan Novák" required>
-            </div>
-            <div class="form-group">
-              <label for="client-company">Vaše firma</label>
-              <input type="text" id="client-company" name="company" placeholder="Firma s.r.o." required>
-            </div>
-            <div class="form-group">
-              <label for="client-email">Váš email</label>
-              <input type="email" id="client-email" name="email" placeholder="jan@firma.cz" required>
-            </div>
-            <div class="form-group">
-              <label for="client-note">Poznámka nebo dotaz</label>
-              <input type="text" id="client-note" name="note" placeholder="Vaše představa, dotaz...">
-            </div>
-            <button type="submit" class="btn btn-submit" id="btn-submit">Odeslat nezávaznou poptávku</button>
-            <p class="gdpr-notice">Odesláním formuláře berete na vědomí zpracování osobních údajů pro účely vyřízení poptávky.</p>
-            <div class="form-success-msg" id="success-msg">Děkuji. Poptávka byla úspěšně odeslána. Brzy se vám ozvu.</div>
-            <div class="form-error-msg" id="error-msg">Odeslání se nezdařilo. Zkuste to prosím znovu nebo napište na e-mail.</div>
-          </form>
+          <div id="inquiry-form-wrapper">
+            <h4>NEZÁVAZNÁ POPTÁVKA</h4>
+            <p>Odešlete vybranou konfiguraci a ozvu se vám do 24 hodin.</p>
+            <form id="order-form">
+              <div class="form-group">
+                <label for="client-name">Vaše jméno a příjmení</label>
+                <input type="text" id="client-name" name="name" placeholder="Jan Novák" required>
+              </div>
+              <div class="form-group">
+                <label for="client-company">Vaše firma</label>
+                <input type="text" id="client-company" name="company" placeholder="Firma s.r.o." required>
+              </div>
+              <div class="form-group">
+                <label for="client-email">Váš email</label>
+                <input type="email" id="client-email" name="email" placeholder="jan@firma.cz" required>
+              </div>
+              <div class="form-group">
+                <label for="client-note">Poznámka nebo dotaz</label>
+                <input type="text" id="client-note" name="note" placeholder="Vaše představa, dotaz...">
+              </div>
+              <button type="submit" class="btn btn-submit" id="btn-submit">Odeslat nezávaznou poptávku</button>
+              <p class="gdpr-notice">Odesláním formuláře berete na vědomí zpracování osobních údajů pro účely vyřízení poptávky.</p>
+              <div class="form-error-msg" id="error-msg">Odeslání se nezdařilo. Zkuste to prosím znovu nebo napište na e-mail.</div>
+            </form>
+          </div>
+
+          <!-- Děkovací karta s rezervací na Cal.com -->
+          <div class="success-card" id="success-card" style="display: none;">
+            <div class="success-badge">POPTÁVKA ODESLÁNA</div>
+            <h4 class="success-title">DĚKUJI ZA POPTÁVKU</h4>
+            <p class="success-desc">Konfigurace dorazila v pořádku. Chcete ušetřit čas a probrat zadání bez čekání? Vyberte si termín pro bezplatnou 30min CORE Discovery Session.</p>
+            <a href="https://cal.com/krystof-regent-rd1jzd/core-discovery" target="_blank" rel="noopener noreferrer" class="btn btn-cal" id="btn-cal-booking">
+              <span>Rezervovat termín hovoru (30 min)</span>
+              <span class="btn-arrow">&rarr;</span>
+            </a>
+            <p class="success-fallback">Nebo nemusíte dělat nic. Ozvu se vám do 24 hodin na uvedený e-mail.</p>
+          </div>
         </div>
 
       </div>
@@ -239,7 +252,7 @@
   <footer class="app-footer">
     <div class="footer-container">
       <div class="footer-logo-row" title="Klikněte pro efekt">
-        <img src="REGENT.svg?v=14" alt="REGENT" class="footer-logo" id="f-logo">
+        <img src="REGENT.svg?v=18" alt="REGENT" class="footer-logo" id="f-logo">
       </div>
 
       <p class="footer-credits">
@@ -249,6 +262,6 @@
     </div>
   </footer>
 
-  <script src="app.js?v=14"></script>
+  <script src="app.js?v=15"></script>
 </body>
 </html>

@@ -163,26 +163,41 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         if (response.ok) {
-          if (successMsg) successMsg.style.display = 'block';
+          const formWrapper = document.getElementById('inquiry-form-wrapper');
+          const successCard = document.getElementById('success-card');
+          const btnCalBooking = document.getElementById('btn-cal-booking');
+
+          // Dynamické sestavení Cal.com odkazu s předvyplněným jménem, e-mailem a konfigurací
+          const calBaseUrl = 'https://cal.com/krystof-regent-rd1jzd/core-discovery';
+          try {
+            const calUrl = new URL(calBaseUrl);
+            if (name) calUrl.searchParams.set('name', name);
+            if (email) calUrl.searchParams.set('email', email);
+            const calNotes = `Firma: ${company || 'neuvedeno'} | Konfigurace: ${addonsText}${note ? ' | Poznámka: ' + note : ''}`;
+            calUrl.searchParams.set('notes', calNotes);
+
+            if (btnCalBooking) {
+              btnCalBooking.href = calUrl.toString();
+            }
+          } catch (e) {
+            console.error('Chyba sestavení Cal.com URL:', e);
+          }
+
+          if (formWrapper) formWrapper.style.display = 'none';
+          if (successCard) successCard.style.display = 'block';
           if (errorMsg) errorMsg.style.display = 'none';
           orderForm.reset();
         } else {
           if (errorMsg) errorMsg.style.display = 'block';
-          if (successMsg) successMsg.style.display = 'none';
         }
       } catch (err) {
         console.error('Chyba odeslání přes Formspree:', err);
         if (errorMsg) errorMsg.style.display = 'block';
-        if (successMsg) successMsg.style.display = 'none';
       } finally {
         if (btnSubmit) {
           btnSubmit.disabled = false;
           btnSubmit.textContent = 'Odeslat nezávaznou poptávku';
         }
-        setTimeout(() => {
-          if (successMsg) successMsg.style.display = 'none';
-          if (errorMsg) errorMsg.style.display = 'none';
-        }, 7000);
       }
     });
   }
