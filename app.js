@@ -128,6 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
     orderForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       const name = document.getElementById('client-name').value;
+      const company = document.getElementById('client-company').value;
       const email = document.getElementById('client-email').value;
       const note = document.getElementById('client-note').value;
       const state = calculateState();
@@ -142,9 +143,10 @@ document.addEventListener('DOMContentLoaded', () => {
         : 'Pouze základní CORE Identity';
 
       const payload = {
-        "Jméno a firma": name,
+        "Jméno a příjmení": name,
+        "Firma": company,
         "Email klienta": email,
-        "Poznámka nebo web": note || 'Bez poznámky',
+        "Poznámka / dotaz": note || 'Bez poznámky',
         "Vybraná konfigurace": addonsText,
         "Celková investice": `${formatMoney(state.price)} Kč bez DPH`,
         "Doba realizace": state.timeline
