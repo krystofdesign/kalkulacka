@@ -43,7 +43,7 @@ body {
   min-height: 100vh;
   line-height: 1.5;
   position: relative;
-  overflow-x: hidden;
+  overflow-x: clip;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -450,8 +450,11 @@ body {
 
 /* Summary aside */
 .summary-aside {
+  position: -webkit-sticky;
   position: sticky;
-  top: 30px;
+  top: 24px;
+  align-self: start;
+  z-index: 10;
 }
 
 .summary-card {
@@ -459,6 +462,24 @@ body {
   border: 2px solid var(--c-border);
   border-radius: var(--radius-lg);
   padding: 30px;
+  max-height: calc(100vh - 48px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(233, 231, 246, 0.25) transparent;
+}
+
+.summary-card::-webkit-scrollbar {
+  width: 5px;
+}
+
+.summary-card::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.summary-card::-webkit-scrollbar-thumb {
+  background: rgba(233, 231, 246, 0.25);
+  border-radius: 4px;
 }
 
 .summary-title {
@@ -776,6 +797,11 @@ body {
     position: static;
   }
 
+  .summary-card {
+    max-height: none;
+    overflow-y: visible;
+  }
+
   .card-breakdown {
     grid-template-columns: 1fr;
   }
@@ -977,7 +1003,7 @@ body {
 .brand-logo {
   height: 16px; /* Zmenšeno o třetinu pro lehký dojem */
   width: auto;
-  opacity: 0.9;
+  opacity: 1;
 }
 
 .badge-pill {
@@ -1128,10 +1154,11 @@ body {
   line-height: 1;
   font-size: 0.82rem;
   letter-spacing: 1.5px;
-  padding: 5px 9px 3px 9px; /* Přesné vyrovnání optického středu pro font Thunder */
+  padding: 7px 10px 3px 10px; /* Opticky posunuto níže na přesný vizuální střed */
   border-radius: 4px;
   font-weight: 700;
   text-transform: uppercase;
+  background: #FFFFFF;
 }
 
 /* =========================================================
@@ -1139,7 +1166,7 @@ body {
    ========================================================= */
 
 html, body {
-  overflow-x: hidden;
+  overflow-x: clip;
   max-width: 100%;
 }
 
@@ -1202,7 +1229,7 @@ html, body {
 
   .badge-pill {
     font-size: 0.75rem;
-    padding: 4px 7px 2px 7px;
+    padding: 6px 8px 2px 8px;
     letter-spacing: 1px;
   }
 
