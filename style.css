@@ -7,12 +7,18 @@
 
 :root {
   /* Brand Color Palette */
-  --c-bg: #2816AE;              /* Sytá královská modrá */
-  --c-surface: #1E0F91;         /* Karty v tmavším odstínu */
-  --c-surface-hover: #190C7D;   /* Hover stav */
-  --c-surface-selected: #14096B;/* Vybraný stav */
-  --c-accent: #9D40F0;          /* Plná fialová pro klíčová slova */
-  --c-light: #E9E7F6;           /* Hlavní lila text a prvky */
+  --c-bg: #2816AE;
+  /* Sytá královská modrá */
+  --c-surface: #1E0F91;
+  /* Karty v tmavším odstínu */
+  --c-surface-hover: #190C7D;
+  /* Hover stav */
+  --c-surface-selected: #14096B;
+  /* Vybraný stav */
+  --c-accent: #9D40F0;
+  /* Plná fialová pro klíčová slova */
+  --c-light: #E9E7F6;
+  /* Hlavní lila text a prvky */
   --c-border: rgba(233, 231, 246, 0.22);
   --c-border-hover: rgba(233, 231, 246, 0.45);
   --c-border-active: #9D40F0;
@@ -733,6 +739,7 @@ body {
     opacity: 0;
     transform: translateY(8px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -999,7 +1006,8 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  opacity: 0.10; /* Přesně 10 % viditelnost podle zadání */
+  opacity: 0.10;
+  /* Přesně 10 % viditelnost podle zadání */
 }
 
 .cube-3d-wrap {
@@ -1086,13 +1094,15 @@ body {
 }
 
 .brand-logo {
-  height: 16px; /* Zmenšeno o třetinu pro lehký dojem */
+  height: 16px;
+  /* Zmenšeno o třetinu pro lehký dojem */
   width: auto;
   opacity: 1;
 }
 
 .badge-pill {
-  font-size: 0.82rem; /* Zmenšeno o třetinu */
+  font-size: 0.82rem;
+  /* Zmenšeno o třetinu */
   letter-spacing: 1.5px;
   padding: 2px 9px;
   border-radius: 4px;
@@ -1187,7 +1197,8 @@ body {
 
 /* Decentní 3D vodoznak na pozadí */
 .bg-3d-scene {
-  opacity: 0.07; /* Ztlumeno na ultra čistých 7 procent */
+  opacity: 0.07;
+  /* Ztlumeno na ultra čistých 7 procent */
 }
 
 /* Patička: čisté řádkování a klidný font */
@@ -1239,7 +1250,8 @@ body {
   line-height: 1;
   font-size: 0.82rem;
   letter-spacing: 1.5px;
-  padding: 7px 10px 3px 10px; /* Opticky posunuto níže na přesný vizuální střed */
+  padding: 7px 10px 3px 10px;
+  /* Opticky posunuto níže na přesný vizuální střed */
   border-radius: 4px;
   font-weight: 700;
   text-transform: uppercase;
@@ -1250,7 +1262,8 @@ body {
    MOBILNÍ RESPONSIVITA & FORMULÁŘ (PRO INSTAGRAM WEBVIEW A TELEFONY POD 480PX)
    ========================================================= */
 
-html, body {
+html,
+body {
   overflow-x: clip;
   max-width: 100%;
 }
@@ -1462,6 +1475,3 @@ html, body {
     line-height: 1.65;
   }
 }
-
-
-
